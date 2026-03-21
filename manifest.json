@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Yonsei Exchange Map",
+  "version": "1.1",
+  "description": "Shows university location on hover for Yonsei Exchange",
+  "content_scripts": [
+    {
+      "matches": ["https://oiaunivfinder.netlify.app/*"],
+      "css": ["style.css"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["qs_rankings.json"],
+      "matches": ["https://oiaunivfinder.netlify.app/*"]
+    }
+  ]
+}
